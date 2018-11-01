@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link id ="modele" rel="stylesheet" type="text/css" href="styles/modele03.css" />
+	<script type="text/javascript" src="script/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="script/jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" />
+	<style type="text/css">
+		#navigation li > a, #dropdown > a, .dropdown-content > a {
+			position:relative;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+	/* =Shadow Nav
+	-------------------------------------------------------------------------- */
+	// Append shadow image to each LI
+	/*$("#navigation li").append('<img class="shadow" src="images/icons-shadow.png" width="90px" height="26px" alt="" />'); // largeur * 2
+	// Animate buttons, shrink and fade shadow
+	$("#navigation li").hover(
+		function() {
+			var e = this;
+			// Monter l'élément <a>, à l'intérieur du <li> sur lequel on se trouve, de 20px, puis le descendre de 5px en une demi-seconde
+			$(e).find("a").stop().animate({ 
+				marginTop: "-20px" }, 250, 
+				function() {
+					$(e).find("a").animate({ 
+					marginTop: "-15px" }, 250);
+					});
+				// Pendant ce temps réduire la dimension et l'opacité de l'ombre l'ombre en un quart de seconde
+				// Donc pas de réaction de l'ombre pour le rebond de 5px
+				$(e).find("img.shadow").stop().animate({ width: "75px", height: "20px", marginLeft: "16px", opacity: 0.25 }, 250);
+			},
+		//Lorsque la souris quitte
+		function(){
+		var e = this;
+		// Descendre l'élément <a> 5px sous sa position d'origine, puis l'y ramener
+		$(e).find("a").stop().animate({ 
+			marginTop: "5px" }, 250, function() {
+			$(e).find("a").animate({ marginTop: "0px" }, 250);
+			});
+		//Pendant ce temps rameer l'ombrage à ses dimension et opacité d'origine
+		$(e).find("img.shadow").stop().animate({ width: "90px", height: "27px", marginLeft: "0", opacity: 1 }, 250);
+		}
+	);*/
+	$("#navigation li > a,.dropdown-content > a,.dropdown").hover(
+		function(){
+			var e = this;
+			$(e).stop().animate({top:"-15px"},250,function(){$(e).animate({top:"-10px"},250);});
+		},
+		function(){
+			var e=this;
+			$(e).stop().animate({top:"5px"},250,function(){$(e).animate({top:"0px"},250);});
+		}
+	)
+});
+	</script>
+</head>
+<body>
+
+    <div id="global">
+        <header>
+            <div id="entete">
+                <h2>Alexandre Tessier & Naoki Miyazaki-Chapleau<br />Présentation de trois sites web</h2>
+            </div>
+        </header>
+        <nav>
+            <ul id="navigation">
+                <li><a href="index.html" title="Accueil">Accueil</a></li>
+                <li><div class="dropdown">
+                    <a href="lemilsa.com.html">Le milsa</a>
+                    <div class="dropdown-content">
+                        <a href="lemilsa.com.html#tableau">Tableau</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="sushihasu.com.html">Hasu sushi</a>
+                    <div class="dropdown-content">
+                        <a href="sushihasu.com.html#tableau">Tableau</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="toriisushi.com.html">Torii Sushi</a>
+                    <div class="dropdown-content">
+                        <a href="toriisushi.com.html#tableau">Tableau</a>
+                    </div>
+                </div></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
+                <li><a id ="texteStyle"onclick="test()" href="javascript:void(0);">Modèle 1</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div id="contenu">
+                <div class="flex-container">
+                    <p>
+                        Aperçu du premier site<br />
+                        <img src="images/capturemilsa.PNG"
+                             width="400"
+                             height="200" />
+                    </p>
+                    <p>
+                        Aperçu du deuxième site<br />
+                        <img src="images/Capturehasu.PNG"
+                             width="400"
+                             height="200" />
+                    </p>
+                    <p>
+                        Aperçu du troisième site<br />
+                        <img src="images/Capturetorii.PNG"
+                             width="400"
+                             height="200" />
+                    </p>
+                </div>
+            </div>
+            <script>
+                var modelBase = document.getElementById('modele').href;
+                var changermodel = document.getElementById('modele');
+                var style = document.getElementById('texteStyle');
+
+                function test() {
+                    if (changermodel.href == modelBase) {
+                        changermodel.href = "styles/modele01.css";
+                        style.textContent = "Model 3"
+                    } else {
+                        changermodel.href = "styles/modele03.css"
+                        style.textContent = "Model 1"
+                    }
+                }
+            </script>
+        </section>
+
+        <footer id="pied">
+            <div id="copyright">
+                <p>© Elephorm & Alsacreations.com</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

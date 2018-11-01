@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Présentation du sushihasu.com</title>
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link id="modele" rel="stylesheet" type="text/css" href="styles/modele03.css" />
+	<script type="text/javascript" src="script/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="script/jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" />
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 2px solid black;
+        }
+		.miniimage {
+			display: inline-block;
+		}
+		#navigation li > a, #dropdown > a, .dropdown-content > a {
+			position:relative;
+		}
+    </style>
+	<script>
+            $(document).ready(function(){   
+				$('.miniimage').click(function(){var srcImg = $(this).attr("src");$('#mainImage').attr("src",srcImg)});
+				$("#navigation li > a,.dropdown-content > a,.dropdown").hover(
+					function(){
+						var e = this;
+						$(e).stop().animate({top:"-15px"},250,function(){$(e).animate({top:"-10px"},250);});
+					},
+					function(){
+						var e=this;
+						$(e).stop().animate({top:"5px"},250,function(){$(e).animate({top:"0px"},250);});
+					}
+				)
+			});
+    </script>
+</head>
+<body>
+    <div id="global">
+        <header>
+            <div id="entete">
+                <h2 class="gras center lightgoldenrodyello">suishihasu.com </h2>
+            </div>
+        </header>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="index.html" title="Accueil">Accueil</a></li>
+                <li><div class="dropdown">
+                    <a href="lemilsa.com.html">Le milsa</a>
+                    <div class="dropdown-content">
+                        <a href="lemilsa.com.html#tableau">Tableau</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="sushihasu.com.html">Hasu sushi</a>
+                    <div class="dropdown-content">
+                        <a href="sushihasu.com.html#tableau">Tableau</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="toriisushi.com.html">Torii Sushi</a>
+                    <div class="dropdown-content">
+                        <a href="toriisushi.com.html#tableau">Tableau</a>
+                    </div>
+                </div></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
+                <li><a id ="texteStyle"onclick="test()" href="javascript:void(0);">Modèle 1</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div id="contenu">
+			<div id="galerie" style="float:right">
+				<img class="miniimage" src="images/03_hasu-sus_480-2017-03-03.jpg"
+					width="170px" height="170px" title="Cliquez pour agrandir" />
+				<img class="miniimage" src="https://portal.restodata.ca/hasu-sushi-wok-laval/gallery/images/09_hasu-sus_480-2017-03-03.jpg"
+					width="170px" height="170px" title="Cliquez pour agrandir" />
+				<img class="miniimage" src="https://assets.restodata.ca/sites/r11374/bg_image3.jpg?v=2"
+					width="170px" height="170px" title="Cliquez pour agrandir" />
+				<img class="miniimage" src="https://portal.restodata.ca/hasu-sushi-wok-laval/gallery/images/04_hasu-sus_480-2017-03-03.jpg"
+					width="170px" height="170px" title="Cliquez pour agrandir" />
+					<br />
+				<img id="mainImage" width="695px" height="695px" src="images/03_hasu-sus_480-2017-03-03.jpg" />
+			</div>
+                    <p>
+                        Voici la première image de mon site
+                        <br />
+
+                        <div id="cache"></div>
+                        <a href="#cache">
+                            <img src="images/03_hasu-sus_480-2017-03-03.jpg" width="500" height="400"
+                                 title="Cliquez pour agrandir" />
+                        </a>
+                        <div class="popup">
+                            <img src="images/03_hasu-sus_480-2017-03-03.jpg" />
+                            <a href="#">X</a>
+                        </div>
+                    </p>
+
+                    <p>
+                        Voici la deuxième image de mon site
+                        <br />
+                        <div id="cache2"></div>
+                        <a href="#cache2">
+                            <img src="https://portal.restodata.ca/hasu-sushi-wok-laval/gallery/images/09_hasu-sus_480-2017-03-03.jpg"
+                                 width="400" height="400" title="Cliquez pour agrandir" />
+                        </a>
+
+                        <div class="popup2">
+                            <img src="https://portal.restodata.ca/hasu-sushi-wok-laval/gallery/images/09_hasu-sus_480-2017-03-03.jpg" />
+                            <a href="#">X</a>
+                        </div>
+                    </p>
+
+                <h3>Information sur générale sur le site </h3>
+
+                <p>Le milsa est un restaurant brézilien qui sert de la viande a volontée sur broche.</p>
+
+                <table id="tableau">
+                    <caption>Observation de l'index</caption>
+                    <tr>
+                        <td>Couleur ou image de fond</td>
+                        <td>
+                            Le fond est couvers de divers images rassemblant l'ensemble des couleurs.
+                            Il y a parfois des zone de couleur noire, rouge et blanc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Couleure du texte</td>
+                        <td>Le texte sur la page d'acceuil est blanc.</td>
+                    </tr>
+                    <tr>
+                        <td>Interfaces</td>
+                        <td>
+                            La page d'acceuil est disponible en 2 langue, elle est présentée
+                            comme une page qui déroule vers le bas. avec 5 options.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nombre d'écran</td>
+                        <td>La page d'accoeuil contien environ 11 écrans de taille 1080 pixel.  </td>
+                    </tr>
+                    <tr>
+                        <td>Présence de vidéo ou d'animation</td>
+                        <td>La page d'acceuille ne contient pas d'animation ou de vidéo. </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Nombre, dimensions et positions<br />
+                            des emplacements publicitaires
+                        </td>
+                        <td>La page d'acceuille ne contient aucune emplacements publicitaires.</td>
+                    </tr>
+                </table>
+
+                <br />
+
+                <table>
+                    <caption> Type des contenu</caption>
+                    <tr>
+                        <td>Version de html ou XHTML</td>
+                        <td>Le site utilise du html mais la version n'est pas spécifier car il utilise du javascript principalement. </td>
+                    </tr>
+                    <tr>
+                        <td>Balises de style</td>
+                        <td>
+                            Les balises de style sont majoritèrement intégré dans le page web.
+                        </td>
+                    </tr>
+					<tr>
+						<td>Utilisation de scripts</td>
+						<td>Il y a du jQuery ainsi que plusieurs autres scripts, tous externes.</td>
+					</tr>
+                </table>
+            </div>
+
+            <script>
+                var modelBase = document.getElementById('modele').href;
+                var changermodel = document.getElementById('modele');
+                var style = document.getElementById('texteStyle');
+
+                function test() {
+                    if (changermodel.href == modelBase) {
+                        changermodel.href = "styles/modele01.css";
+                        style.textContent = "Model 3"
+                    } else {
+                        changermodel.href = "styles/modele03.css"
+                        style.textContent = "Model 1"
+                    }
+                }
+            </script>
+        </section>
+        <footer>
+            <div id="pied">
+                <p>Copyright Gabarit 3</p>
+            </div>
+        </footer>
+    </div>
+	<script>
+		var modelBase = document.getElementById('modele').href;
+        var changermodel = document.getElementById('modele');
+        var style = document.getElementById('texteStyle');
+		function test() {
+            if (changermodel.href == modelBase) {
+                changermodel.href = "styles/modele01.css";
+                style.textContent = "Model 3"
+            } else {
+                changermodel.href = "styles/modele03.css"
+                style.textContent = "Model 1"
+            }
+        }
+	</script>
+</body>
+</html>

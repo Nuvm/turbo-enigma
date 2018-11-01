@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{31F8F006-E993-45A8-AFA0-3975D3731545}"
+	ProjectSection(SolutionItems) = preProject
+		styles\base.css = styles\base.css
+		conclusion.html = conclusion.html
+		index.html = index.html
+		lemilsa.com.html = lemilsa.com.html
+		styles\modele01.css = styles\modele01.css
+		styles\modele03.css = styles\modele03.css
+		sushihasu.com.html = sushihasu.com.html
+		toriisushi.com.html = toriisushi.com.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45EC6724-538A-407D-AEAB-69B3674CF536}
+	EndGlobalSection
+EndGlobal
